@@ -4,6 +4,7 @@ import {prop, sortBy} from 'ramda';
 
 const FavoriteMovies = ({movies = [], removeMovie}) => {
   const moviesSorted = sortBy(prop('title'), movies);
+
   return (
     <ul className='columns is-multiline is-centered'>
       {moviesSorted.map(movie => (

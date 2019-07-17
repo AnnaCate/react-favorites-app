@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from '@reach/router';
-import FavoriteMovies from '../components/FavoriteMovies';
+import FavoriteMovies from './FavoriteMovies';
+import imgsrc from '../../undraw_like_dislike_1dfj.svg';
+import NavBar from '../../Navbar';
 
 const Movies = props => {
   const [movies, setMovies] = useState([]);
@@ -25,6 +27,15 @@ const Movies = props => {
   return (
     <div>
       <section className='hero is-primary'>
+        <NavBar />
+        {/* <Link to='/'>
+          <img
+            src={imgsrc}
+            alt='Home'
+            width='50px'
+            style={{position: 'absolute', right: '1rem', top: '1rem'}}
+          />
+        </Link> */}
         <div className='hero-body'>
           <h1 className='title'>Favorite Movies</h1>
           <Link to='/movies/add'>
